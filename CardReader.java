@@ -2,30 +2,23 @@ package cardReader;
 
 public class CardReader {
 	//Attributes
-	private int studentNumber;
-	private String firstName;
 	private String lastName;
-	private int studentDob;
-
+	private String firstName;
+	private int studentNumber;
+	
 	
 
 	//Constructor with four parameters for arguments.
-	public CardReader(String firstName, String lastName, int studentNumber, int studentDob){
-		this.firstName = firstName;
+	public CardReader(String lastName, String firstName,  int studentNumber){
 		this.lastName = lastName;
+		this.firstName = firstName;
 		this.studentNumber = studentNumber;
-		this.studentDob = studentDob;
+		
 	}
 
 	
 	//All setters and getters.
-	public int getStudentNumber() {
-		return studentNumber;
-	}
-
-	public void setStudentNumber(int studentNumber) {
-		this.studentNumber = studentNumber;
-	}
+	
 
 	public String getFirstName() {
 		return firstName;
@@ -43,18 +36,18 @@ public class CardReader {
 		this.lastName = lastName;
 	}
 
-	public int getStudentDob() {
-		return studentDob;
+	public int getStudentNumber() {
+		return studentNumber;
 	}
 
-	public void setStudentDob(int studentDob) {
-		this.studentDob = studentDob;
+	public void setStudentNumber(int studentNumber) {
+		this.studentNumber = studentNumber;
 	}
+	
 	//Override with a String
 	@Override
 	public String toString(){
-		return "Card Information [First Name]: " + firstName + ",  [Last Name]: " + lastName + ", [Student CIN]:" + studentNumber
-				+ "[Student DOB]: " + studentDob;
+		return "Card Information [First Name]: " + firstName + ",  [Last Name]: " + lastName + ", [Student CIN]:" + studentNumber;
 	}
 	
 }
